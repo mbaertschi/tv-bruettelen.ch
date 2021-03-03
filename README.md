@@ -1,6 +1,6 @@
 [![Atlas, Hugo Boilerplate](https://atlas.indigotree.co.uk/images/github-banner.png)](https://github.com/indigotree/atlas)
 
-![](http://forthebadge.com/images/badges/uses-badges.svg) ![](http://forthebadge.com/images/badges/built-by-developers.svg) ![](http://forthebadge.com/images/badges/gluten-free.svg)
+![uses badges](http://forthebadge.com/images/badges/uses-badges.svg) ![built by developers](http://forthebadge.com/images/badges/built-by-developers.svg) ![gluten-free](http://forthebadge.com/images/badges/gluten-free.svg)
 
 # Atlas
 
@@ -14,12 +14,12 @@ The [Hugo](https://gohugo.io/) boilerplate we use for our projects.
 
 Atlas provides the following features out of the box:
 
-* Pre configured support for Hugo Pipes, with SASS and Autoprefixer
-* Environment driven `robots.txt` file (disallows robots on everything other than production)
-* Base HTML templates with easy customisation/extension
-* [Configuration](/netlify.toml) for Netlify deployments
-* [Better defaults](#security-headers) for configuring HTTPS
-* [Better redirects](#redirects) with Netlify instead of `<meta http-equiv="refresh">`
+- Pre configured support for Hugo Pipes, with SASS and Autoprefixer
+- Environment driven `robots.txt` file (disallows robots on everything other than production)
+- Base HTML templates with easy customisation/extension
+- [Configuration](/netlify.toml) for Netlify deployments
+- [Better defaults](#security-headers) for configuring HTTPS
+- [Better redirects](#redirects) with Netlify instead of `<meta http-equiv="refresh">`
 
 ## Prerequisite
 
@@ -29,7 +29,7 @@ Atlas does not include a copy of the `hugo` binary. You will need to [install Hu
 
 To get started, you can either clone the repository, or deploy straight to [Netlify](#deploy-to-netlify). Then run the following from the project root:
 
-```
+```bash
 npm install
 npm run server
 ```
@@ -38,9 +38,9 @@ npm run server
 
 There are 3 commands available:
 
-* `npm run build` - Builds assets (sass, js, fonts, images) and runs `hugo`
-* `npm run build:preview` - The same as `build`, but runs `hugo --buildDrafts --buildFuture`
-* `npm run server` - Runs BrowserSync and watches for changes, running `build` when changes are detected
+- `npm run build` - Builds assets (sass, js, fonts, images) and runs `hugo`
+- `npm run build:preview` - The same as `build`, but runs `hugo --buildDrafts --buildFuture`
+- `npm run server` - Runs BrowserSync and watches for changes, running `build` when changes are detected
 
 ## Robots.txt
 
@@ -54,18 +54,18 @@ Atlas has `netlify-lambda` installed out of the box to make working with Netlify
 
 Here is an example that you can start from:
 
-```
+```javascript
 exports.handler = (event, context, callback) => {
-    callback(null, {
-        statusCode: 200,
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            message: "Hi from Lambda."
-        })
-    });
-}
+  callback(null, {
+    statusCode: 200,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      message: "Hi from Lambda.",
+    }),
+  });
+};
 ```
 
 ## Headers
@@ -80,7 +80,7 @@ Atlas comes with some default headers to help you better protect your site. The 
 
 These headers are configured with the following values:
 
-```
+```bash
 X-Frame-Options: DENY
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
@@ -105,10 +105,9 @@ Atlas files will take priority over your theme due to the order Hugo looks for f
 
 If you wish the develop your site as a theme inside Atlas, you can copy `/layouts` into your theme and update the references within the `gulpfile.babel.js`.
 
-
 ## File Structure
 
-```
+```bash
 │   │
 |   └──── /assets            - Source files for assets (SASS, JS, Images, Fonts etc)
 │

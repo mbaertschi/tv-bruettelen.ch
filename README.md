@@ -1,6 +1,7 @@
 [![Atlas, Hugo Boilerplate](https://atlas.indigotree.co.uk/images/github-banner.png)](https://github.com/indigotree/atlas)
 
 ![uses badges](http://forthebadge.com/images/badges/uses-badges.svg) ![built by developers](http://forthebadge.com/images/badges/built-by-developers.svg) ![gluten-free](http://forthebadge.com/images/badges/gluten-free.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7558aed4-495c-4843-9e4d-da0bb1dbcb3b/deploy-status)](https://app.netlify.com/sites/silly-cray-2ae582/deploys)
 
 # Atlas
 

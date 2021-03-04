@@ -1,0 +1,16 @@
+<section
+  id="contacts"
+  class="bg-inverse text-white bg-skew-left text-center pb-4"
+>
+  <div class="container text-center bg-skew-right">
+    <h2 class="mb-4"><span class="highlight">Kontakte</span></h2>
+
+    <div class="members row justify-content-md-center mt-4 mx-3">
+      {{ range sort $.Site.Data.contacts "weight" "desc" }}
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        {{ partial "contacts/portrait.html" . }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

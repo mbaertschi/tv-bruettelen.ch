@@ -1,6 +1,21 @@
-$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+@import "variables";
+@import "mixins";
+@import "bootstrap";
+
+// component styles
+@import "components/hero";
+@import "components/portrait";
+@import "components/section";
+
+// content styles
+@import "content/background";
+@import "content/typography";
 
 body {
   font-family: $body-font;
+  scroll-behavior: smooth;
+}
+
+main {
+  background-color: $brand-grey;
 }

@@ -1,4 +1,5 @@
-{{ $s := resources.Get "sass/app.scss" | toCSS | postCSS (dict "config"
-"postcss.config.js") | minify }}
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
+
+{{ $s := resources.Get "sass/app.scss" | toCSS $options | postCSS (dict "config" "postcss.config.js") | minify | fingerprint }}
 
 <link rel="stylesheet" href="{{ $s.Permalink }}" />

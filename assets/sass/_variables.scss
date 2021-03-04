@@ -1,0 +1,44 @@
+@import "mixins";
+
+// Fonts
+$font-family-sans-serif: "Roboto", serif;
+$headings-font-family: "Roboto Slab", sans-serif;
+$headings-margin-bottom: 1rem;
+
+$font-weight-base: 200;
+
+$body-font: Montserrat, "Roboto Slab", sans-serif;
+
+// Colors
+$brand-primary: #215aa7;
+$brand-inverse: #333841;
+$brand-grey: rgba(238, 238, 242, 1);
+$brand-light: lighten($brand-inverse, 40);
+$body-bg: #f7f7f9;
+$body-color: $brand-inverse;
+
+$inverse-bg: $brand-inverse;
+$inverse-color: $brand-light;
+$link-color: $brand-primary;
+$blockquote-border-color: $brand-light;
+
+$theme-colors: (
+  "primary": $brand-primary,
+  "greyish": $brand-grey,
+);
+
+// Spacer
+$spacer: 0.6rem;
+$spacers: (
+  0: 0,
+);
+@for $i from 1 through 20 {
+  $spacers: map-merge(
+    $spacers,
+    (
+      $i: (
+        $i * $spacer,
+      ),
+    )
+  );
+}

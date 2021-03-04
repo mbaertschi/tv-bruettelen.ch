@@ -1,3 +1,23 @@
-<header class="site-header" role="banner">
-  <strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></strong>
+<header class="header" role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark px-2 py-1" role="navigation">
+      <a class="navbar-brand" alt="{{ .Site.Title }}" href="{{ .Site.BaseURL }}">
+          <img width="50px" src="/img/logo-white-no-text.png" />
+          <span class="font-weight-bolder">TV Brüttelen</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
+          aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+              {{ $currentPage := . }}
+              {{ range .Site.Menus.main }}
+              <li
+                  class="px-1 nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+                  <a title="{{ .Title }}" class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{end}}
+          </ul>
+      </div>
+  </nav>
 </header>

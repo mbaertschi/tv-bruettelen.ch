@@ -1,12 +1,13 @@
 baseURL = "/"
-languageCode = "en-gb"
-title = "{TITLE}"
+languageCode = "de-ch"
+title = "TV Brüttelen"
 
 enableRobotsTXT = true
 disableAliases = true
 
 [params]
 disallow_search_engines = false # set robots.txt to disallow everything
+description   = "Turnverein Brüttelen"
 
 # add redirects/headers
 [outputs]
@@ -30,3 +31,32 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
+
+
+sectionPagesMenu = "main"
+
+[menu]
+  [[menu.main]]
+    identifier = "news"
+    name = "Aktuell"
+    title = "Aktuell"
+    url = "/#headlines"
+    weight = 1
+  [[menu.main]]
+    identifier = "events"
+    name = "Tätigkeitsprogramm"
+    title = "Tätigkeitsprogramm"
+    url = "/#events"
+    weight = 2
+  [[menu.main]]
+    identifier = "teams"
+    name = "Trainingsangebot"
+    title = "Trainingsangebot"
+    url = "/#teams"
+    weight = 3
+  [[menu.main]]
+    identifier = "contacts"
+    name = "Kontakte"
+    title = "Kontakte"
+    url = "/#contacts"
+    weight = 4

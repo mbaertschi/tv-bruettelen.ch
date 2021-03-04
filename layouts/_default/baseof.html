@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}" class="h-100">
+
     <head>
 
         {{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
@@ -15,14 +16,13 @@
         {{ block "site/styles" . }}{{ partial "site/styles.html" . }}{{ end }}
 
     </head>
-    <body>
+
+    <body class="d-flex flex-column h-100">
 
         {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
-        <main class="site-main" role="main">
-
+        <main class="flex-shrink-0" role="main">
             {{ block "main" . }}{{ end }}
-
         </main>
 
         {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}

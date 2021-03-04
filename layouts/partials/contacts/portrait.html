@@ -1,0 +1,17 @@
+<figure class="portrait contact-{{ .id }}">
+  <img
+    src="https://robohash.org/{{ .email }}"
+    class="figure-img img-fluid img-thumbnail rounded-circle"
+    alt="{{ .name }}"
+    title="{{ .name }}"
+  />
+  <figcaption class="figure-caption text-center">
+    {{ .name }}
+    <br />
+    <small class="text-light">{{ .title }}</small>
+    <br />
+    <small class="text-light">{{ .phone }}</small>
+    <br />
+    <small class="text-light text-break">{{ .email }}</small>
+  </figcaption>
+</figure>

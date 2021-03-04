@@ -1,0 +1,22 @@
+@import "variables";
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.text-inverse {
+  color: $brand-inverse;
+}
+
+.highlight {
+  background-color: $brand-primary;
+  color: white;
+  line-height: 1.25;
+  padding: 0.2rem 1rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.blockquote {
+  font-family: $headings-font-family;
+}

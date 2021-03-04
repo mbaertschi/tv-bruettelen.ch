@@ -146,7 +146,7 @@ If you wish the develop your site as a theme inside Atlas, you can copy `/layout
 
 You can deploy directly to Netlify using this button:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/indigotree/atlas)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mbaertschi/tv-bruettelen.ch)
 
 ## License
 

@@ -21,3 +21,13 @@ $bg-skew: 2deg;
 .bg-light {
   background-color: $brand-light;
 }
+
+.bg-hero {
+  background: rgb(148, 245, 237);
+  background: linear-gradient(
+    30deg,
+    rgba(148, 245, 237, 1) 0%,
+    rgba(190, 202, 243, 1) 40%,
+    rgba(172, 129, 233, 1) 100%
+  );
+}
